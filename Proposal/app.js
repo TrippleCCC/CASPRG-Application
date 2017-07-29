@@ -12,7 +12,8 @@ var Proposalquestions = [
   new Question("10.	Are there any risks involved with this experience?  Explain "),
   new Question("11.	How will you document your project?  (journals, spreadsheets, photos, videos, feedback from others, etc.)")
 ]
-
+var nbut = document.getElementById("btn1");
+var bbut = document.getElementById("btn0");
 
 function initalize() {
   var proposal = new Proposal(Proposalquestions);
@@ -20,16 +21,22 @@ function initalize() {
   var element = document.getElementById("Question");
   element.innerHTML = proposal.getQuestion().text;
 
-  var nbut = document.getElementById("btn1");
-  var bbut = document.getElementById("btn0");
 
   var area = document.getElementById("answerArea");
 
   nbut.onclick = function() {
     proposal.addAnswer(area.value);
+    proposal.getQuestion().storeAnswer(area.value);
     element.innerHTML = proposal.getQuestion().text;
     area.innerHTML = "Type your answer here...";
   }
+
+  bbut.onclick = function() {
+    proposal.questionIndex--;
+    element.innerHTML = proposal.getQuestion().text;
+    area.innerHTML = proposal.getQuestion().answer;
+  }
+
 }
 
 

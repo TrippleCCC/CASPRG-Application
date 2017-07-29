@@ -7,8 +7,7 @@ function Question(text) {
 Question.prototype.Answer = function(choice) {
   return this.answer;
 }
-Question.prototype.storeAnswer = function() {
-  var element = document.getElementById("answerArea");
-  this.answer = element.value;
+Question.prototype.storeAnswer = function(x) {
+  this.answer = x;
   return;
 }
