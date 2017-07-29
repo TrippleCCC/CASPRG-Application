@@ -26,14 +26,13 @@ function initalize() {
   var area = document.getElementById("answerArea");
 
 
-    element.innerHTML = proposal.getQuestion().text;
-    if(nbut.clicked == true)
-    {
-      proposal.getQuestion.answer = area.value;
-      proposal.getAnswer(area.value);
-      area.innerHTML = "Type your answer here...";
-    }
+  element.innerHTML = proposal.getQuestion().text;
 
+  nbut.onclick = function() {
+    proposal.addAnswer(area.value);
+    element.innerHTML = proposal.getQuestion().text;
+    area.innerHTML = "Type your answer here...";
+  }
   }
 }
 

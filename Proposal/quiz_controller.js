@@ -12,8 +12,8 @@ Proposal.prototype.isEnded = function() {
   return this.questions.length === this.questionIndex;
 }
 
-Proposal.prototype.getAnswer = function(answer) {
-  this.fullText += this.getQuestion().getAnswer();
+Proposal.prototype.addAnswer = function(answer) {
+  this.fullText += this.getQuestion() + "\n" + answer;
   this.questionIndex++;
   return;
 }
