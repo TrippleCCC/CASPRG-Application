@@ -18,7 +18,7 @@ function initalize() {
   var proposal = new Proposal(Proposalquestions);
 
   var element = document.getElementById("Question");
-  element.innerHTML = proposal.getQuestion().text;
+  element.innerHTML = "getmoney";
 
   var nbut = document.getElementById("btn1");
   var bbut = document.getElementById("btn0");
