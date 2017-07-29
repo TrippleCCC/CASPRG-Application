@@ -25,10 +25,11 @@ function initalize() {
 
   var area = document.getElementById("answerArea");
 
-
-  element.innerHTML = proposal.getQuestion().text;
-
-  
+  nbut.onclick = function() {
+    proposal.addAnswer(area.value);
+    element.innerHTML = proposal.getQuestion().text;
+    area.innerHTML = "Type your answer here...";
+  }
   }
 }
 
