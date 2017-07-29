@@ -32,7 +32,13 @@ function initalize() {
   }
 
   bbut.onclick = function() {
-    proposal.questionIndex--;
+    if(proposal.questionIndex > 0)
+    {
+      proposal.questionIndex--;
+    }
+    else {
+      window.location.href = "index.html";
+    }
     element.innerHTML = proposal.getQuestion().text;
     area.innerHTML = proposal.getQuestion().answer;
   }
