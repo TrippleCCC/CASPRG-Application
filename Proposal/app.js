@@ -30,7 +30,7 @@ function initalize() {
     element.innerHTML = proposal.getQuestion().text;
     area.innerHTML = "Type your answer here...";
   }
-  }
 }
+
 
 initalize();
