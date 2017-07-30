@@ -1,7 +1,8 @@
 function Question(text) {
-  this.text=text;
+  this.text="" + text + "";
   //this.choices=choices;
   this.answer="";
+  this.answered = false;
 }
 
 Question.prototype.Answer = function(choice) {

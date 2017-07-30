@@ -9,11 +9,20 @@ Proposal.prototype.getQuestion = function() {
 }
 
 Proposal.prototype.isEnded = function() {
-  return this.questions.length === this.questionIndex;
+  return this.questions.length - 1 === this.questionIndex;
 }
 
 Proposal.prototype.addAnswer = function(answer) {
   this.fullText += this.getQuestion() + "\n" + answer;
-  this.questionIndex++;
   return;
+}
+
+Proposal.prototype.buildAnswer = function() {
+  var endString = "";
+  for (var i = 0; i < this.questions.length; i++) {
+    endString += this.questions[i].text + "\n";
+    endString += this.questions[i].answer + "\n";
+  }
+
+  return endString;
 }
