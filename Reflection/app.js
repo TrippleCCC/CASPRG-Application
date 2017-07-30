@@ -1,16 +1,11 @@
 //All the proposal questions
-var Proposalquestions = [
-  new Question("1. Give your CAS activity a descriptive title and date."),
-  new Question("2. Describe your idea in detail, including your roles and responsibilities."),
-  new Question("3. Are you collaborating with anyone?  Please list their names."),
-  new Question("4. Is this experience Creativity, Activity, Service, or multiple?  Explain."),
-  new Question("5. Predict which of the 7 learning outcomes you will meet. (see CAS guide)"),
-  new Question("6. What, specifically, do you hope to accomplish?  "),
-  new Question("7. Determine the steps necessary to accomplish your goals and give yourself an approximate deadline.  "),
-  new Question("8. Determine where you can go for assistance, advice, and information.  (people or resources)"),
-  new Question("9. Who will supervise this CAS experience?  (review guidelines if necessary) "),
-  new Question("10. Are there any risks involved with this experience?  Explain "),
-  new Question("11. How will you document your project?  (journals, spreadsheets, photos, videos, feedback from others, etc.)")
+var reflectionQuestions = [
+  new Question("Describe the experience itself. (Location, your resonsibilities, etc.)"),
+  new Question("Discuss what you learned about your self and about others. "),
+  new Question("Discuss what abilities and what you developed. If no abilities were developed then type none"),
+  new Question("Discuss how the experience affected you emotionally or changed your prespective"),
+  new Question("If there was a moment of discovery then describe it. If not then type none."),
+  new Question("Overall what would you rate this experience and why?")
 ]
 
 //Create variables for the "next" and "back" Buttons
@@ -22,7 +17,7 @@ var bbut = document.getElementById("btn0");
 function initalize() {
 
   //create a new proposal
-  var proposal = new Proposal(Proposalquestions);
+  var proposal = new Reflection(reflectionQuestions);
 
   //variable for the question area and setting that to the first question
   var element = document.getElementById("Question");
@@ -71,7 +66,7 @@ function endProposal(x)
   //this creates new buttons ManageBack and coping
   buttonArea.innerHTML = "<button id=\"btn2\"><span id=\"MB\">Go to ManageBack</span></button>\n"+
   "<button id=\"btn3\"><span id\"CB\">Main Menu</span></button>" +
-  "<button id=\"btn4\"><span id\"startover\">Begin another Proposal</span></button>";
+  "<button id=\"btn4\"><span id\"startover\">Begin another Reflection</span></button>";
 
   //sets the question area to the final message
   var element = document.getElementById("Question");
@@ -96,7 +91,7 @@ function endProposal(x)
   }
 
   startoverBut.onclick = function() {
-    window.location.href = "../Proposal/proposalPage.html";
+    window.location.href = "../Reflection/reflectionPage.html";
 
   }
 
