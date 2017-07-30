@@ -29,13 +29,27 @@ body
   font-size: 20px;
   color: #5a6772;
 }
+.grid #answerArea{
+  width: 500px;
+  height: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.grid #Question{
+  font-family: sans-serif;
+}
+
+.grid #navigation{
+  font-family: sans-serif;
+  margin-left: 10px;
+}
 
 .buttons{
   margin-top: 30px;
   position: relative;
 }
 
-#btn0, #btn1, #btn2{
+#btn0, #btn1, #btn2, #btn3, #btn4{
   background-color: #778897;
   width: 250px;
   font-size: 20px;
@@ -52,7 +66,7 @@ body
   font-family: sans-serif;
 }
 
-#btn0:hover, #btn1:hover, #btn2:hover{
+#btn0:hover, #btn1:hover, #btn2:hover,#btn3:hover, #btn4:hover{
   cursor: pointer;
   background-color: #57636e;
 }

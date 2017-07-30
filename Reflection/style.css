@@ -35,8 +35,11 @@ body
   margin-left: 50px;
   margin-right: 50px;
 }
-
+.grid #Question{
+  font-family: sans-serif;
+}
 .grid #navigation{
+  font-family: sans-serif;
     margin-left: 10px;
 }
 
