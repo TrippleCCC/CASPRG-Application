@@ -9,7 +9,7 @@ var SProposalquestions = [
   new Question("8.	How did you document this experience?")
 ]
 
-//Create variables for the "next" and "back" Buttons
+//Create variables for the "next" and "back" Buttonshjh
 var nbut = document.getElementById("btn1");
 var bbut = document.getElementById("btn0");
 
