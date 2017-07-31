@@ -38,6 +38,8 @@ function initalize() {
       proposal.getQuestion().storeAnswer(area.value);
       proposal.questionIndex++;
       element.innerHTML = proposal.getQuestion().text;
+      document.getElementById("area").innerHTML = "<textarea id=\"answerArea\">Type your answer here...</textarea>";
+      area = document.getElementById("answerArea");
       if(proposal.getQuestion().answered === false)
       {
         area.innerHTML = "Type your answer here...";
