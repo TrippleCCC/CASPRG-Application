@@ -31,6 +31,8 @@ function initalize() {
   nbut.onclick = function() {
     if(proposal.isEnded())
     {
+      proposal.getQuestion().answered = true;
+      proposal.getQuestion().storeAnswer(area.value);
       endProposal(proposal);
     }
     else{
@@ -65,6 +67,8 @@ function initalize() {
 
 function endProposal(x)
 {
+  document.getElementById("area").innerHTML = "<textarea id=\"answerArea\">Type your answer here...</textarea>";
+  area = document.getElementById("answerArea");
   var buttonArea = document.getElementById("navigation");
   //this creates new buttons ManageBack and coping
   buttonArea.innerHTML = "<button id=\"btn2\"><span id=\"MB\">Go to ManageBack</span></button>\n"+
