@@ -46,6 +46,14 @@ function initalize() {
       element.innerHTML = proposal.getQuestion().text;
       document.getElementById("area").innerHTML = "<textarea id=\"answerArea\">Type your answer here...</textarea>";
       area = document.getElementById("answerArea");
+      if(proposal.questionIndex === 4)
+      {
+        document.getElementById("objectives").innerHTML = "<img src=\"../images/LO1.png\" alt=\"LO1\">\n<img src=\"../images/LO2.png\" alt=\"LO2\">\n<img src=\"../images/LO3.png\" alt=\"LO3\">";
+      }
+      else if(proposal.questionIndex !== 4)
+      {
+        document.getElementById("objectives").innerHTML =" ";
+      }
       if(proposal.getQuestion().answered === false)
       {
         area.innerHTML = "Type your answer here...";
@@ -64,6 +72,14 @@ function initalize() {
       proposal.questionIndex--;
       element.innerHTML = proposal.getQuestion().text;
       area.innerHTML = proposal.getQuestion().Answer();
+      if(proposal.questionIndex === 4)
+      {
+        document.getElementById("objectives").innerHTML = "<img src=\"../images/LO1.png\" alt=\"LO1\">\n<img src=\"../images/LO2.png\" alt=\"LO2\">\n<img src=\"../images/LO3.png\" alt=\"LO3\">";
+      }
+      else if(proposal.questionIndex !== 4)
+      {
+        document.getElementById("objectives").innerHTML =" ";
+      }
     }
     else {
       window.location.href = "../index.html";
@@ -110,6 +126,10 @@ function endProposal(x)
 
 }
 
+function addLearningOs()
+{
+
+}
 
 
 initalize();
